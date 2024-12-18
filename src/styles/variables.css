@@ -1,0 +1,12 @@
+:root {
+  --textColorMain: #000;
+  --textColorSecondary: #7f7f7f;
+  --backgroundColorMain: #fff;
+  --backgroundColorSecondary: #e0e7f2;
+  --accent: #6094e1;
+  --accentHover: #467ee3;
+
+  --fontFamily: 'Poppins', sans-serif;
+
+  --transition: 250ms easy-in-out;
+}

@@ -1,0 +1,24 @@
+body {
+  font-family: var(--fontFamily);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--textColorMain);
+  background-color: var(--backgroundColorMain);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
