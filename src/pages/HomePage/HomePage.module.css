@@ -1,0 +1,42 @@
+.page {
+  padding: 20px 0;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.box {
+  padding: 10px 15px;
+
+  background-color: var(--backgroundColorSecondary);
+
+  border-radius: 15px;
+}
+
+.description {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .box {
+    padding: 16px 28px;
+  }
+
+  .description {
+    font-size: 24px;
+  }
+}

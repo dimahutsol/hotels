@@ -1,0 +1,31 @@
+.buttonBox {
+  display: flex;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 10px 24px;
+
+  color: var(--textColorAlternative);
+  background-color: var(--accent);
+
+  border-radius: 10px;
+
+  transition: all var(--transition);
+
+  &:hover {
+    background-color: var(--accentHover);
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 12px 36px;
+
+    font-size: 20px;
+  }
+}

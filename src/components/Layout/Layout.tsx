@@ -2,6 +2,7 @@ import { FC, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Container from '../Container/Container';
+import Loader from '../Loader/Loader';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
@@ -12,7 +13,7 @@ const Layout: FC = () => {
     <div className={s.page}>
       <Header />
       <main className={s.main}>
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback={<Loader />}>
           <Container>
             <Outlet />
           </Container>

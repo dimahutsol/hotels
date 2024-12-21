@@ -1,0 +1,11 @@
+.page {
+  padding: 20px 0;
+}
+
+.errorText {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+
+  color: var(--textColorSecondary);
+}

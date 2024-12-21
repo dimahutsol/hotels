@@ -5,15 +5,29 @@ import Container from '../Container/Container';
 
 import s from './Header.module.css';
 
+interface LinkProps {
+  isActive: boolean;
+}
+
+const buildLinkClass = ({ isActive }: LinkProps) => {
+  return `${s.link} ${isActive ? s.linkActive : ''}`;
+};
+
 const Header: FC = () => {
   return (
     <header className={s.header}>
       <Container>
         <div className={s.headerBox}>
-          <NavLink to="/">Logo</NavLink>
+          <NavLink to="/" className={s.logo}>
+            Logo
+          </NavLink>
           <nav className={s.nav}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/hotels">Hotels</NavLink>
+            <NavLink to="/" className={buildLinkClass}>
+              Home
+            </NavLink>
+            <NavLink to="/hotels" className={buildLinkClass}>
+              Hotels
+            </NavLink>
           </nav>
         </div>
       </Container>
