@@ -22,10 +22,10 @@ const Header: FC = () => {
             Logo
           </NavLink>
           <nav className={s.nav}>
-            <NavLink to="/" className={buildLinkClass}>
+            <NavLink to="/" className={({ isActive }) => buildLinkClass({ isActive })}>
               Home
             </NavLink>
-            <NavLink to="/hotels" className={buildLinkClass}>
+            <NavLink to="/hotels" className={({ isActive }) => buildLinkClass({ isActive })}>
               Hotels
             </NavLink>
           </nav>

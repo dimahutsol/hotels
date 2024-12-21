@@ -5,6 +5,7 @@ import Loader from '../../components/Loader/Loader';
 
 import { Hotel } from '../../types/hotel';
 import { getHotels } from '../../services/hotelsApi';
+import { showToast } from '../../utils/toasts';
 
 import s from './HotelsPage.module.css';
 
@@ -22,6 +23,7 @@ const HotelsPage: FC = () => {
       } catch (err) {
         console.log(err);
         setError('Sorry, something went wrong.');
+        showToast('Sorry, something went wrong.', 'error');
       } finally {
         setIsLoading(false);
       }
@@ -30,13 +32,14 @@ const HotelsPage: FC = () => {
     fetchHotels();
   }, []);
 
-  console.log('hotels', hotels);
-
   return (
     <div className={s.page}>
       {isLoading && <Loader />}
-      {error && <p className={s.errorText}>{error}Sorry, something went wrong.</p>}
-      <HotelsList hotels={hotels} />
+      {error && <p className={s.errorText}>{error}</p>}
+      {!isLoading && !error && hotels.length === 0 && (
+        <p className={s.errorText}>No hotels available.</p>
+      )}
+      {!isLoading && !error && <HotelsList hotels={hotels} />}
     </div>
   );
 };

@@ -7,18 +7,22 @@ import { Hotel } from '../../types/hotel';
 import s from './HotelsList.module.css';
 
 interface HotelsListProps {
-  hotels: Hotel[] | [];
+  hotels: Hotel[];
 }
 
 const HotelsList: FC<HotelsListProps> = ({ hotels }) => {
   return (
-    <div className={s.wrapper}>
-      {hotels.map(hotel => (
-        <div key={hotel.id}>
-          <HotelsItem hotel={hotel} />
-        </div>
-      ))}
-    </div>
+    <ul className={s.list}>
+      {hotels.length === 0 ? (
+        <p className={s.noHotelsText}>No hotels available</p>
+      ) : (
+        hotels.map(hotel => (
+          <li key={hotel.id} className={s.listItem}>
+            <HotelsItem hotel={hotel} />
+          </li>
+        ))
+      )}
+    </ul>
   );
 };
 

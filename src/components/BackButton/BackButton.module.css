@@ -1,0 +1,27 @@
+.buttonBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  color: var(--accent);
+  background-color: transparent;
+
+  border: none;
+
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--accentHover);
+  }
+}
+
+@media (min-width: 1440px) {
+  .buttonBack {
+    font-size: 24px;
+  }
+}

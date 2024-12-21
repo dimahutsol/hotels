@@ -34,3 +34,9 @@
 .linkActive {
   color: var(--accentHover);
 }
+
+@media (min-width: 768px) {
+  .link {
+    font-size: 24px;
+  }
+}

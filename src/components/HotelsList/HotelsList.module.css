@@ -1,5 +1,33 @@
-.wrapper {
+.list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.noHotelsText {
+  font-size: 36px;
+  text-align: center;
+
+  color: var(--textColorSecondary);
+}
+
+@media (min-width: 768px) {
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .listItem {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+@media (min-width: 1440px) {
+  .list {
+    gap: 20px;
+  }
+
+  .listItem {
+    width: calc((100% - 60px) / 3);
+  }
 }

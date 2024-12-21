@@ -8,7 +8,7 @@ axios.defaults.baseURL = BASE_URL;
 const simulatePending = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const getHotels = async (): Promise<Hotel[]> => {
-  await simulatePending(500);
+  await simulatePending(1500);
 
   const response: AxiosResponse<Hotel[]> = await axios.get('/src/mock/hotels.json');
 

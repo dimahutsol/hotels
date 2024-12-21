@@ -1,5 +1,44 @@
 .wrapper {
-  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+
+  padding: 10px;
+  min-height: 550px;
 
   background-color: var(--backgroundColorSecondary);
+
+  border-radius: 10px;
+
+  transition: all var(--transition);
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.image {
+  margin: 10px auto;
+  height: 200px;
+
+  border-radius: 5px;
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    min-height: 680px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .image {
+    height: 300px;
+  }
+
+  .text {
+    font-size: 21px;
+  }
 }
