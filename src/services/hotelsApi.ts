@@ -10,7 +10,7 @@ const simulatePending = (ms: number) => new Promise(resolve => setTimeout(resolv
 export const getHotels = async (): Promise<Hotel[]> => {
   await simulatePending(1500);
 
-  const response: AxiosResponse<Hotel[]> = await axios.get('/src/mock/hotels.json');
+  const response: AxiosResponse<Hotel[]> = await axios.get('/mock/hotels.json');
 
   const { data } = response;
 
@@ -20,7 +20,7 @@ export const getHotels = async (): Promise<Hotel[]> => {
 export const getHotelById = async (id: string): Promise<Hotel | null> => {
   await simulatePending(500);
 
-  const response: AxiosResponse<Hotel[]> = await axios.get('/src/mock/hotels.json');
+  const response: AxiosResponse<Hotel[]> = await axios.get('/mock/hotels.json');
 
   const { data } = response;
 
