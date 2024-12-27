@@ -28,7 +28,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd cars-world
+  cd hotels
 ```
 
 Install dependencies
